@@ -1,8 +1,31 @@
-# Vision Transformer for Pneumonia Classification 🫁🤖
+# Vision Transformer for Pneumonia Classification
 
 A state-of-the-art Vision Transformer (ViT) implementation for pneumonia detection in chest X-ray images, featuring advanced attention visualization and interpretability.
 
-## 🌟 Key Features
+## Model Performance
+
+Our ViT-Small model achieved excellent performance on real chest X-ray data (5,856 images):
+- **Accuracy**: 90.38%
+- **F1 Score**: 92.35%
+- **AUC-ROC**: 95.63%
+- **Sensitivity**: 92.82%
+- **Specificity**: 86.32%
+
+### Performance Visualizations
+
+#### ROC Curve Analysis
+![ROC Curve](images/roc_curve.png)
+
+#### Precision-Recall Analysis
+![Precision-Recall Curve](images/precision_recall_curve.png)
+
+#### Confusion Matrix
+![Confusion Matrix](images/confusion_matrix.png)
+
+#### Threshold Analysis
+![Threshold Analysis](images/threshold_analysis.png)
+
+## Key Features
 
 ### Advanced Architecture
 - **Vision Transformer Models**: ViT-Small, ViT-Base, and ViT-Large configurations
@@ -28,7 +51,7 @@ A state-of-the-art Vision Transformer (ViT) implementation for pneumonia detecti
 - **Error Analysis**: Detailed failure case analysis and confidence assessment
 - **Fast Inference**: Optimized for real-time clinical applications
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 pneumonia_vit/
@@ -43,12 +66,36 @@ pneumonia_vit/
 │   ├── vit_base_config.yaml      # ViT-Base configuration
 │   ├── vit_small_config.yaml     # ViT-Small configuration
 │   └── vit_large_config.yaml     # ViT-Large configuration
+├── images/                       # Results and visualizations
+│   ├── roc_curve.png            # ROC analysis
+│   ├── confusion_matrix.png     # Classification matrix
+│   └── attention_*.png          # Attention visualizations
 ├── main.py                       # Main training/evaluation script
 ├── requirements.txt              # Dependencies
 └── README.md                     # This file
 ```
 
-## 🚀 Quick Start
+## Attention Visualization Examples
+
+### Attention Rollout Visualization
+The attention rollout shows how the model focuses on different regions of the chest X-ray:
+
+![Attention Rollout Example 1](images/IM-0001-0001_attention_rollout.png)
+*Attention rollout showing model focus on pneumonia-affected lung regions*
+
+![Attention Rollout Example 2](images/IM-0003-0001_attention_rollout.png)
+*Another example demonstrating attention on relevant anatomical structures*
+
+### Multi-Head Attention Analysis
+Different attention heads capture different aspects of the medical image:
+
+![Multi-Head Attention Example 1](images/IM-0001-0001_multihead_attention.png)
+*Multi-head attention visualization showing diverse attention patterns*
+
+![Multi-Head Attention Example 2](images/IM-0003-0001_multihead_attention.png)
+*Additional multi-head attention example highlighting different anatomical features*
+
+## Quick Start
 
 ### 1. Environment Setup
 
@@ -103,7 +150,7 @@ python main.py --eval_only --checkpoint checkpoints/best_checkpoint.pth
 python main.py --eval_only --checkpoint checkpoints/best_checkpoint.pth --generate_attention
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Model Configurations
 
@@ -127,7 +174,7 @@ training:
   gradient_clip_val: 1.0   # Gradient clipping
 ```
 
-## 🎨 Attention Visualization Examples
+## Attention Visualization Types
 
 ### 1. Attention Rollout
 Shows the cumulative attention from the CLS token to image patches across all layers.
@@ -141,7 +188,7 @@ Demonstrates attention evolution from early (texture) to late (semantic) layers.
 ### 4. Attention Statistics
 Quantifies attention entropy, spread, head diversity, and concentration patterns.
 
-## 📊 Expected Performance
+## Expected Performance
 
 Based on chest X-ray pneumonia classification (5,856 images):
 
@@ -157,7 +204,7 @@ Based on chest X-ray pneumonia classification (5,856 images):
 
 *ViT-Small results are actual achieved performance with your configuration: model_size small, epochs 5, batch_size 16*
 
-## 🧬 Technical Details
+## Technical Details
 
 ### Vision Transformer Architecture
 - **Patch Embedding**: 16x16 patches converted to 768-dim embeddings
@@ -177,7 +224,7 @@ Based on chest X-ray pneumonia classification (5,856 images):
 - **Interpretability**: Clinical-grade attention visualizations
 - **Threshold Optimization**: Optimized for medical decision making
 
-## 🆚 Comparison with DenseNet-121
+## Comparison with DenseNet-121
 
 | Metric | DenseNet-121 (2 epochs) | ViT-Small (5 epochs) |
 |--------|--------------------------|----------------------|
@@ -200,7 +247,7 @@ Based on chest X-ray pneumonia classification (5,856 images):
 | **Data Efficiency** | Better with small data | Requires more data/pretraining |
 | **Clinical Insights** | Local feature focus | Global relationship understanding |
 
-## 📋 Command Line Arguments
+## Command Line Arguments
 
 ```bash
 # Configuration
@@ -226,7 +273,7 @@ Based on chest X-ray pneumonia classification (5,856 images):
 --experiment_name STR      # Experiment identifier
 ```
 
-## 🎯 Clinical Applications
+## Clinical Applications
 
 ### Advantages of ViT for Medical Imaging
 1. **Global Context**: Captures relationships between distant anatomical regions
@@ -240,7 +287,7 @@ Based on chest X-ray pneumonia classification (5,856 images):
 - **Inference Speed**: Real-time capable for clinical decision support
 - **Model Uncertainty**: Confidence scores for human-AI collaboration
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -270,7 +317,7 @@ Based on chest X-ray pneumonia classification (5,856 images):
    python main.py --data_root /path/to/your/data
    ```
 
-## 🔬 Research Extensions
+## Research Extensions
 
 ### Potential Improvements
 - **Hierarchical ViT**: Multi-scale attention for different anatomical structures
@@ -284,17 +331,17 @@ Based on chest X-ray pneumonia classification (5,856 images):
 - **Federated Learning**: Collaborative training across hospitals
 - **Active Learning**: Intelligent sample selection for annotation
 
-## 📚 References
+## References
 
 1. Dosovitskiy, A., et al. "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale." ICLR 2021.
 2. Chen, J., et al. "TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation." arXiv 2021.
 3. Ghesu, F.C., et al. "Self-supervised learning from 100 million medical images." Medical Image Analysis 2022.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **PyTorch Team**: For the excellent deep learning framework
 - **Timm Library**: For comprehensive ViT implementations
