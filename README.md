@@ -22,17 +22,28 @@ Our ViT-Small model achieved excellent performance on real chest X-ray data (5,8
 
 ### Performance Visualizations
 
-#### ROC Curve Analysis
-![ROC Curve](images/roc_curve.png)
-
-#### Precision-Recall Analysis
-![Precision-Recall Curve](images/precision_recall_curve.png)
-
-#### Confusion Matrix
-![Confusion Matrix](images/confusion_matrix.png)
-
-#### Threshold Analysis
-![Threshold Analysis](images/threshold_analysis.png)
+<table>
+  <tr>
+    <td align="center">
+      <b>ROC Curve Analysis</b><br>
+      <img src="images/roc_curve.png" alt="ROC Curve" width="400"/>
+    </td>
+    <td align="center">
+      <b>Precision-Recall Analysis</b><br>
+      <img src="images/precision_recall_curve.png" alt="Precision-Recall Curve" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Confusion Matrix</b><br>
+      <img src="images/confusion_matrix.png" alt="Confusion Matrix" width="400"/>
+    </td>
+    <td align="center">
+      <b>Threshold Analysis</b><br>
+      <img src="images/threshold_analysis.png" alt="Threshold Analysis" width="400"/>
+    </td>
+  </tr>
+</table>
 
 ## Key Features
 
@@ -95,20 +106,34 @@ pneumonia_vit/
 ### Attention Rollout Visualization
 The attention rollout shows how the model focuses on different regions of the chest X-ray:
 
-![Attention Rollout Example 1](images/IM-0001-0001_attention_rollout.png)
-*Attention rollout showing model focus on pneumonia-affected lung regions*
-
-![Attention Rollout Example 2](images/IM-0003-0001_attention_rollout.png)
-*Another example demonstrating attention on relevant anatomical structures*
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/IM-0001-0001_attention_rollout.png" alt="Attention Rollout Example 1" width="400"/><br>
+      <i>Attention rollout showing model focus on pneumonia-affected lung regions</i>
+    </td>
+    <td align="center">
+      <img src="images/IM-0003-0001_attention_rollout.png" alt="Attention Rollout Example 2" width="400"/><br>
+      <i>Another example demonstrating attention on relevant anatomical structures</i>
+    </td>
+  </tr>
+</table>
 
 ### Multi-Head Attention Analysis
 Different attention heads capture different aspects of the medical image:
 
-![Multi-Head Attention Example 1](images/IM-0001-0001_multihead_attention.png)
-*Multi-head attention visualization showing diverse attention patterns*
-
-![Multi-Head Attention Example 2](images/IM-0003-0001_multihead_attention.png)
-*Additional multi-head attention example highlighting different anatomical features*
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/IM-0001-0001_multihead_attention.png" alt="Multi-Head Attention Example 1" width="400"/><br>
+      <i>Multi-head attention visualization showing diverse attention patterns</i>
+    </td>
+    <td align="center">
+      <img src="images/IM-0003-0001_multihead_attention.png" alt="Multi-Head Attention Example 2" width="400"/><br>
+      <i>Additional multi-head attention example highlighting different anatomical features</i>
+    </td>
+  </tr>
+</table>
 
 ## Quick Start
 
