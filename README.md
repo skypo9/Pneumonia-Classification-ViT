@@ -2,6 +2,15 @@
 
 A state-of-the-art Vision Transformer (ViT) implementation for pneumonia detection in chest X-ray images, featuring advanced attention visualization and interpretability.
 
+## Academic Project Information
+
+**Master of Cybersecurity - Final Capstone Project**  
+This implementation is part of a weekly task for the final capstone project in the Master of Computer Science/Cybersecurity program. The project demonstrates the application of advanced machine learning techniques in medical AI and cybersecurity contexts.
+
+**Academic Context**: Final Semester Capstone Project  
+**Program**: Master of Computer Science/Cybersecurity  
+**Focus**: Medical AI Security and Privacy-Preserving Healthcare Technologies
+
 ## Model Performance
 
 Our ViT-Small model achieved excellent performance on real chest X-ray data (5,856 images):
@@ -26,6 +35,12 @@ Our ViT-Small model achieved excellent performance on real chest X-ray data (5,8
 ![Threshold Analysis](images/threshold_analysis.png)
 
 ## Key Features
+
+### Academic Research Implementation
+- **Capstone Project**: Demonstrates advanced ML techniques for cybersecurity applications
+- **Medical AI Security**: Focus on privacy-preserving healthcare technologies
+- **Comparative Analysis**: Systematic evaluation against CNN-based approaches (DenseNet-121)
+- **Production-Ready Code**: Industry-standard implementation with comprehensive documentation
 
 ### Advanced Architecture
 - **Vision Transformer Models**: ViT-Small, ViT-Base, and ViT-Large configurations
@@ -347,6 +362,20 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Timm Library**: For comprehensive ViT implementations
 - **Medical Imaging Community**: For advancing AI in healthcare
 - **Open Source Contributors**: For making this possible
+
+## Disclaimer and Attribution
+
+**Academic Use Disclaimer**: This project is developed as part of academic coursework for the Master of Cybersecurity program. While the implementation demonstrates state-of-the-art techniques, it is intended for educational and research purposes.
+
+**Medical AI Notice**: This system is for research and educational purposes only. It should not be used for actual clinical diagnosis without proper validation, regulatory approval, and medical professional oversight.
+
+**Usage and Attribution**: 
+- This code is made available for educational and research purposes
+- If you use, modify, or build upon this work, please provide appropriate attribution
+- Credit the original author and mention the academic context (Master of Cybersecurity Capstone Project)
+- Any publications or presentations using this work should acknowledge the source
+
+**Contact for Attribution**: Please notify the author if you use this code in your research or projects to ensure proper academic credit and collaboration opportunities.
 
 ---
 
