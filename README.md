@@ -4,7 +4,7 @@ A state-of-the-art Vision Transformer (ViT) implementation for pneumonia detecti
 
 ## Academic Project Information
 
-**Master of Cybersecurity - Final Capstone Project**  
+**Master of Computer Science/Cybersecurity - Final Capstone Project**  
 This implementation is part of a weekly task for the final capstone project in the Master of Computer Science/Cybersecurity program. The project demonstrates the application of advanced machine learning techniques in medical AI and cybersecurity contexts.
 
 **Academic Context**: Final Semester Capstone Project  
