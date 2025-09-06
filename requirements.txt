@@ -1,0 +1,44 @@
+# Vision Transformer Requirements for Pneumonia Classification
+
+# Core PyTorch ecosystem
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Computer Vision and Image Processing
+timm>=0.9.0              # PyTorch Image Models (ViT implementations)
+opencv-python>=4.8.0
+Pillow>=9.0.0
+
+# Machine Learning and Data Science
+scikit-learn>=1.3.0
+numpy>=1.21.0
+pandas>=1.5.0
+
+# Visualization and Plotting
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Configuration and Logging
+PyYAML>=6.0
+tensorboard>=2.13.0
+wandb>=0.15.0            # Optional: for advanced experiment tracking
+
+# Development and Testing
+pytest>=7.0.0
+black>=23.0.0
+isort>=5.12.0
+flake8>=6.0.0
+
+# Additional utilities
+tqdm>=4.65.0             # Progress bars
+pathlib2>=2.3.7         # Path utilities (if needed)
+dataclasses>=0.8         # For Python < 3.7
+typing-extensions>=4.0.0 # Type hints
+
+# Optional: Advanced augmentations
+albumentations>=1.3.0    # Advanced image augmentations
+
+# Optional: Model optimization
+torchscript>=1.0.0       # Model optimization
+onnx>=1.14.0             # Model export

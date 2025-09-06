@@ -1,0 +1,69 @@
+data:
+  data_root: data/chest_xray_pneumonia
+  preprocessing_type: vit_standard
+  image_size:
+  - 224
+  - 224
+  use_augmentation: true
+  rotation_range: 10.0
+  horizontal_flip_prob: 0.5
+  brightness_factor: 0.1
+  contrast_factor: 0.1
+model:
+  model_name: vit_small_patch16_224
+  pretrained: true
+  num_classes: 1
+  dropout_rate: 0.1
+  patch_size: 16
+  embed_dim: 384
+  depth: 12
+  num_heads: 6
+  mlp_ratio: 4.0
+  freeze_backbone: false
+  freeze_layers: 0
+training:
+  learning_rate: 0.0003
+  weight_decay: 0.3
+  batch_size: 32
+  num_epochs: 50
+  patience: 10
+  loss_type: bce_with_logits
+  class_balancing: true
+  pos_weight: null
+  use_scheduler: true
+  scheduler_type: cosine_warmup
+  warmup_epochs: 5
+  scheduler_factor: 0.5
+  scheduler_patience: 5
+  min_lr: 1.0e-07
+  gradient_clip_val: 1.0
+  mixup_alpha: 0.2
+  cutmix_alpha: 1.0
+  use_mixup: true
+evaluation:
+  threshold_metric: f1
+  generate_attention_maps: true
+  num_attention_samples: 20
+  attention_layers:
+  - 3
+  - 6
+  - 9
+  - 11
+  attention_heads:
+  - 0
+  - 3
+  - 6
+  - 9
+  generate_gradcam: true
+  gradcam_layer: blocks.11.norm1
+  num_gradcam_samples: 20
+experiment:
+  experiment_name: vit_pneumonia
+  description: Vision Transformer for pneumonia classification
+  random_seed: 42
+  device: auto
+  log_interval: 10
+  save_interval: 5
+  output_dir: outputs
+  log_dir: logs
+  checkpoint_dir: checkpoints
