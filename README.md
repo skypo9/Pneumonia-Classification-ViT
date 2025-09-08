@@ -166,6 +166,9 @@ The model provides interpretable attention maps showing:
 ## Common Commands
 
 ```bash
+# Recommended training test
+python main.py --model_size base --epochs 10 --batch_size 16
+
 # Fast training test
 python main.py --model_size small --epochs 2 --batch_size 32
 
