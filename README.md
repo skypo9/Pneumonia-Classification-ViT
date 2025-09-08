@@ -53,20 +53,55 @@ pip install -r requirements.txt
 ```
 
 ### 2. Prepare Data
-Organize your chest X-ray dataset as:
+
+#### Dataset Information
+This project uses the **Chest X-Ray Images (Pneumonia)** dataset for binary classification:
+- **Dataset Source**: [Kaggle - Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+- **Total Images**: 5,856 chest X-ray images
+- **Classes**: NORMAL and PNEUMONIA
+- **Image Format**: JPEG files
+- **Original Split**: Pre-divided into train/validation/test sets
+
+#### How to Get the Dataset
+
+**Option 1: Download from Kaggle**
+1. Visit: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+2. Click "Download" (requires Kaggle account)
+3. Extract the zip file to your project directory
+
+**Option 2: Using Kaggle API**
+```bash
+# Install Kaggle API
+pip install kaggle
+
+# Download dataset (requires kaggle.json in ~/.kaggle/)
+kaggle datasets download -d paultimothymooney/chest-xray-pneumonia
+
+# Extract the dataset
+unzip chest-xray-pneumonia.zip
+```
+
+#### Directory Structure Setup
+After downloading, organize your dataset as follows:
 ```
 data/chest_xray_pneumonia/
 ├── chest_xray/
 │   ├── train/
-│   │   ├── NORMAL/
-│   │   └── PNEUMONIA/
+│   │   ├── NORMAL/          # 1,341 normal X-ray images
+│   │   └── PNEUMONIA/       # 3,875 pneumonia X-ray images
 │   ├── val/
-│   │   ├── NORMAL/
-│   │   └── PNEUMONIA/
+│   │   ├── NORMAL/          # 8 normal X-ray images
+│   │   └── PNEUMONIA/       # 8 pneumonia X-ray images
 │   └── test/
-│       ├── NORMAL/
-│       └── PNEUMONIA/
+│       ├── NORMAL/          # 234 normal X-ray images
+│       └── PNEUMONIA/       # 390 pneumonia X-ray images
 ```
+
+**Important Notes:**
+- The validation set is very small (16 images total) - the model may use train/test split internally
+- Images are in JPEG format with varying resolutions
+- The dataset is imbalanced (more pneumonia cases than normal)
+- All images are pediatric chest X-rays (ages 1-5 years)
 
 ### 3. Training
 ```bash
