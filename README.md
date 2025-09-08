@@ -11,6 +11,31 @@ A Vision Transformer (ViT) implementation for pneumonia detection in chest X-ray
 - **Sensitivity**: 92.82%
 - **Specificity**: 86.32%
 
+### Performance Visualizations
+
+<table>
+  <tr>
+    <td align="center">
+      <b>ROC Curve</b><br>
+      <img src="images/roc_curve.png" alt="ROC Curve" width="300"/>
+    </td>
+    <td align="center">
+      <b>Confusion Matrix</b><br>
+      <img src="images/confusion_matrix.png" alt="Confusion Matrix" width="300"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Precision-Recall Curve</b><br>
+      <img src="images/precision_recall_curve.png" alt="Precision-Recall" width="300"/>
+    </td>
+    <td align="center">
+      <b>Threshold Analysis</b><br>
+      <img src="images/threshold_analysis.png" alt="Threshold Analysis" width="300"/>
+    </td>
+  </tr>
+</table>
+
 ## Key Features
 
 - **Vision Transformer Models**: ViT-Small, ViT-Base, and ViT-Large configurations
@@ -103,6 +128,33 @@ The model provides interpretable attention maps showing:
 - **Attention Rollout**: How the model focuses on lung regions
 - **Multi-Head Attention**: Different attention patterns across heads
 - **Layer-wise Evolution**: Attention development through the network
+
+### Attention Examples
+
+<table>
+  <tr>
+    <td align="center">
+      <b>Attention Rollout</b><br>
+      <img src="images/IM-0001-0001_attention_rollout.png" alt="Attention Rollout" width="300"/><br>
+      <i>Model focus on pneumonia-affected regions</i>
+    </td>
+    <td align="center">
+      <b>Multi-Head Attention</b><br>
+      <img src="images/IM-0001-0001_multihead_attention.png" alt="Multi-Head Attention" width="300"/><br>
+      <i>Different attention patterns across heads</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/IM-0003-0001_attention_rollout.png" alt="Attention Rollout 2" width="300"/><br>
+      <i>Additional attention rollout example</i>
+    </td>
+    <td align="center">
+      <img src="images/IM-0003-0001_multihead_attention.png" alt="Multi-Head Attention 2" width="300"/><br>
+      <i>Diverse attention head patterns</i>
+    </td>
+  </tr>
+</table>
 
 ## Clinical Applications
 
