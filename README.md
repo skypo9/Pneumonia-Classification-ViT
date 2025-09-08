@@ -6,10 +6,26 @@ A Vision Transformer (ViT) implementation for pneumonia detection in chest X-ray
 
 **Model**: ViT-Small trained on 5,856 chest X-ray images
 - **Accuracy**: 90.38%
-- **F1 Score**: 92.35%
-- **AUC-ROC**: 95.63%
-- **Sensitivity**: 92.82%
-- **Specificity**: 86.32%
+- **F1 Score**: 92.02%
+- **AUC-ROC**: 96.78%
+- **Sensitivity**: 88.72%
+- **Specificity**: 93.16%
+  
+### Performance Analysis
+- **Total Test Samples**: 624
+- **Correct Predictions**: 572
+- **Incorrect Predictions**: 52
+- **Error Rate**: 0.0833
+- **False Positives**: 26
+- **False Negatives**: 26
+
+### Inference Performance
+- **Average Inference Time**: 0.0549 seconds per image
+
+### Threshold Optimization
+- **Optimization Metric**: f1
+- **Best Threshold**: 0.150
+- **Best Score**: 0.9333
 
 ### Performance Visualizations
 
